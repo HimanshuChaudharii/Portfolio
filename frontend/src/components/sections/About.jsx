@@ -39,23 +39,7 @@ const About = () => {
               </a>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 mt-10">
-              {[
-                { label: 'Projects', value: '10+' },
-                { label: 'Technologies', value: '8+' },
-                { label: 'Experience', value: '1+ Yr' }
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="glass p-4 rounded-xl text-center transition-transform duration-500 hover:scale-105"
-                >
-                  <h3 className="text-2xl font-bold text-brandAccent">{item.value}</h3>
-                  <p className="text-white/60 text-sm">{item.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+            
 
           {/* Right Image */}
           <div className="lg:w-1/2 relative transition-all duration-800">
