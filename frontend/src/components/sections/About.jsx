@@ -1,6 +1,5 @@
 import AnimatedSection from '../ui/AnimatedSection';
 import Tilt from 'react-parallax-tilt';
-import { motion } from 'framer-motion';
 
 const About = () => {
   return (
@@ -9,12 +8,7 @@ const About = () => {
         <div className="flex flex-col lg:flex-row gap-16 items-center">
 
           {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="lg:w-1/2"
-          >
+          <div className="lg:w-1/2 transition-all duration-800">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               About <span className="text-brandAccent">Me</span>
             </h2>
@@ -52,44 +46,31 @@ const About = () => {
                 { label: 'Technologies', value: '8+' },
                 { label: 'Experience', value: '1+ Yr' }
               ].map((item, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.2 }}
-                  className="glass p-4 rounded-xl text-center"
+                  className="glass p-4 rounded-xl text-center transition-transform duration-500 hover:scale-105"
                 >
                   <h3 className="text-2xl font-bold text-brandAccent">{item.value}</h3>
                   <p className="text-white/60 text-sm">{item.label}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Right Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="lg:w-1/2 relative"
-          >
+          <div className="lg:w-1/2 relative transition-all duration-800">
             <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1.05} transitionSpeed={2000}>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="w-full aspect-square max-w-md mx-auto relative rounded-2xl overflow-hidden glass p-2 group shadow-2xl"
-              >
+              <div className="w-full aspect-square max-w-md mx-auto relative rounded-2xl overflow-hidden glass p-2 group shadow-2xl transition-transform duration-500 hover:scale-105">
                 <div className="absolute inset-0 border border-white/10 rounded-2xl z-20 pointer-events-none group-hover:border-brandAccent/40 transition-all duration-500" />
-
                 <div className="absolute inset-0 bg-gradient-to-tr from-brandAccent/30 to-transparent opacity-60 group-hover:opacity-0 transition duration-500 z-10"></div>
-
                 <img
                   src="/image1.jpeg"
                   alt="Himanshu Chaudhari"
                   className="w-full h-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-110"
                 />
-              </motion.div>
+              </div>
             </Tilt>
-          </motion.div>
+          </div>
 
         </div>
       </div>
