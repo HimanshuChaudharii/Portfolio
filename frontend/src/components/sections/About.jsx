@@ -12,7 +12,7 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               About <span className="text-brandAccent">Me</span>
             </h2>
-
+            
             <p className="text-white/70 text-lg leading-relaxed mb-8">
               I am Himanshu Chaudhari, a Computer Science and Engineering undergraduate at Lovely Professional University with a strong passion for building intelligent, data-driven, and scalable software solutions. My core interests include Artificial Intelligence, Data Analytics, and Backend Development.
               <br /><br />
